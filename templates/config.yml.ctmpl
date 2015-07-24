@@ -6,7 +6,7 @@ log:
     environment: development
 storage:
     cache:
-        layerinfo: inmemory
+        blobdescriptor: redis
     filesystem:
         rootdirectory: /var/lib/registry
     maintenance:
@@ -14,7 +14,12 @@ storage:
             enabled: false
 http:
     addr: :443
+    tls:
+      certificate: /etc/nginx/external/cert.pem
+      key: /etc/nginx/external/key.pem
 auth:
   htpasswd:
     realm: docker
     path: /etc/nginx/external/docker-registry.htpasswd
+redis:
+  addr: redis:6379
