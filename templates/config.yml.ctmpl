@@ -1,0 +1,20 @@
+version: 0.1
+log:
+  level: debug
+  fields:
+    service: registry
+    environment: development
+storage:
+    cache:
+        layerinfo: inmemory
+    filesystem:
+        rootdirectory: /var/lib/registry
+    maintenance:
+        uploadpurging:
+            enabled: false
+http:
+    addr: :443
+auth:
+  htpasswd:
+    realm: docker-reg
+    path: /etc/nginx/external/docker-registry.htpasswd

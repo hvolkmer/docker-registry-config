@@ -39,4 +39,8 @@ template {
   destination = "/etc/nginx/external/docker-registry.htpasswd"
 }
 
+template {
+  source = "/templates/config.yml.ctmpl"
+  destination = "/etc/nginx/external/config.yml"
+}
 
