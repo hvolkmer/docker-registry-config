@@ -1,9 +1,9 @@
-consul = "consul:8500"
+consul = "consul.service.consul:8500"
 retry = "10s"
 max_stale = "10m"
 
 vault {
-  address = "https://vault.service.consul:8200"
+  address = "http://vault.service.consul:8200"
 }
 
 template {
