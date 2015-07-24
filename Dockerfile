@@ -8,7 +8,6 @@ RUN cd /tmp && tar -xvzf /tmp/consul-template.tar.gz && mv /tmp/consul-template_
 RUN mkdir /config
 RUN mkdir /templates
 ADD templates/* /templates/
-ADD create-config.sh /create-config.sh
 
 ENTRYPOINT ["/bin/consul-template","-config", "/templates/consul-template-config.hcl"]
 
