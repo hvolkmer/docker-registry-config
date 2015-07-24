@@ -27,7 +27,16 @@ template {
   command = "chmod 600 /etc/nginx/external/key.pem"
 }
 
+
+template {
+  source = "/templates/dh.pem.ctmpl"
+  destination = "/etc/nginx/external/dh.pem"
+  command = "chmod 600 /etc/nginx/external/dh.pem"
+}
+
 template {
   source = "/templates/docker-registry.htpasswd.ctmpl"
   destination = "/etc/nginx/external/docker-registry.htpasswd"
 }
+
+
