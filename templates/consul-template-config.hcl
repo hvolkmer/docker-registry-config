@@ -18,15 +18,16 @@ template {
 
 template {
   source = "/templates/cert.pem.ctmpl"
-  destination = "/config/cert.pem"
+  destination = "/etc/nginx/external/cert.pem"
 }
 
 template {
   source = "/templates/key.pem.ctmpl"
-  destination = "/config/key.pem"
+  destination = "/etc/nginx/external/key.pem"
+  command = "chmod 600 /etc/nginx/external/key.pem"
 }
 
 template {
   source = "/templates/docker-registry.htpasswd.ctmpl"
-  destination = "/config/docker-registry.htpasswd"
+  destination = "/etc/nginx/external/docker-registry.htpasswd"
 }
