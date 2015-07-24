@@ -16,5 +16,5 @@ http:
     addr: :443
 auth:
   htpasswd:
-    realm: docker-reg
+    realm: docker
     path: /etc/nginx/external/docker-registry.htpasswd
